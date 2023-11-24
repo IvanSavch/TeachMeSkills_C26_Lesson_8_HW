@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Staff {
      static Surgeon surgeon;
-    public static List<Doctor> staff() {
+    public static List<Doctor> getStaff() {
         List<Doctor> doctors = new ArrayList<>();
         doctors.add( new Therapist(1, "Ivanov", 29, 6, Sex.MALE, 416));
         doctors.add(new Surgeon(2, "Petrov", 25, 3, Sex.MALE, 529));
@@ -21,19 +21,19 @@ public class Staff {
     public void getDoctor(int code) {
         switch (code) {
             case 1:
-                System.out.println(staff().get(1).toString());
-                staff().get(1).Treat();
+                System.out.println(getStaff().get(1).toString());
+                getStaff().get(1).Treat();
                 break;
             case 2:
-                System.out.println(staff().get(2).toString());
-                staff().get(2).Treat();
+                System.out.println(getStaff().get(2).toString());
+                getStaff().get(2).Treat();
                 break;
             case 3:
-                System.out.println(staff().get(0).toString());
-                staff().get(0).Treat();
+                System.out.println(getStaff().get(0).toString());
+                getStaff().get(0).Treat();
                 break;
             default:
-                staff().get(0).Treat();
+                getStaff().get(0).Treat();
         }
     }
 }
