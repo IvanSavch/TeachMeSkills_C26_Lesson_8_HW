@@ -13,10 +13,6 @@ public abstract class Doctor {
     public Doctor(int id,String name, int age, int experience, Sex sex, int cabinet) {
         this.id = id;
         this.name = name;
-        if (age < 20 || experience < 0) {
-            System.out.println("this not are doctor");
-            return;
-        }
         this.age = age;
         this.experience = experience;
         this.cabinet = cabinet;
